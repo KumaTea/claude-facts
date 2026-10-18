@@ -1,0 +1,43 @@
+{
+  "name": "spinner-facts",
+  "version": "0.1.0",
+  "description": "Replaces the spinner verb with a random line from a facts file, scrolling long ones like an LED ticker.",
+  "author": { "name": "KumaTea" },
+  "userConfig": {
+    "factsFile": {
+      "type": "string",
+      "title": "Facts file",
+      "description": "Absolute or ~/ path to a text file with one fact per line (blank lines and lines starting with # are skipped). Empty: the facts.txt shipped with the plugin.",
+      "default": ""
+    },
+    "width": {
+      "type": "number",
+      "title": "Ticker width",
+      "description": "Columns the text may take before it scrolls. 0 fits it to the terminal.",
+      "default": 0,
+      "min": 0
+    },
+    "speedMs": {
+      "type": "number",
+      "title": "Scroll step (ms)",
+      "description": "Milliseconds per one-character step. The engine redraws at most ten times a second, so 100 is the floor.",
+      "default": 150,
+      "min": 100,
+      "max": 2000
+    },
+    "rotateLoops": {
+      "type": "number",
+      "title": "Change a scrolling fact after (passes)",
+      "description": "How many times a fact too long to fit goes round before the next one follows it in. 0 keeps one fact for the whole turn.",
+      "default": 10,
+      "min": 0
+    },
+    "rotateSeconds": {
+      "type": "number",
+      "title": "Change a short fact after (seconds)",
+      "description": "How long a fact that fits stays before the next one replaces it. 0 keeps one fact for the whole turn.",
+      "default": 60,
+      "min": 0
+    }
+  }
+}

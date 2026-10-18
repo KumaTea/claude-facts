@@ -1,0 +1,16 @@
+{
+  "name": "spinner-facts",
+  "owner": {
+    "name": "KumaTea"
+  },
+  "metadata": {
+    "description": "Claude facts for Claude Code: random lines on the spinner, scrolled like an LED ticker."
+  },
+  "plugins": [
+    {
+      "name": "spinner-facts",
+      "source": "./",
+      "description": "Replaces the spinner verb with a random line from a facts file, scrolling long ones like an LED ticker."
+    }
+  ]
+}
